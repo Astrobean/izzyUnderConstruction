@@ -9,10 +9,8 @@ $primaryDark: hsl(41,90%,43%)
 $primaryDarker: hsl(41,80%,33%)
 $textLink: $primary
 
-$breakpointXL: 1800px
-$breakpointLg: 1200px
-$breakpointMd: 900px
-$breakpointSm: 600px
+$for-mobile: 768px // or less
+$for-desktop: 769px // or more
 
 // reset
 body
@@ -24,7 +22,7 @@ body
 
 // styles
 .highlight
-    color: $textEmphasis
+    color: white
     font-weight: 600
 
 body
@@ -32,9 +30,10 @@ body
     width: 100%
     background: linear-gradient(to right, hsla(235.26, 25%, 5%, 1), hsla(235.26, 25%, 5%, 0.5)), url('../img/fiber.jpg')
     background-repeat: no-repeat
-    display: flex
-    align-items: center
-    justify-content: center
+    animation-name: move
+    animation-duration: 120s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
 
     main
         padding: 3rem
@@ -47,10 +46,11 @@ body
     .title
         color: white
         font-weight: 700
+        margin-bottom: 2rem
 
     .divider
-        height: 0.5rem
-        width: 5rem
+        height: 0.25rem
+        width: 3rem
         background-color: $primary
         margin-bottom: 2rem
 
@@ -60,6 +60,7 @@ body
 
         li
             font-weight: 600
+            line-height: 1.3rem
 
     .contact
         color: $textEmphasis
@@ -71,7 +72,7 @@ body
             cursor: pointer
 
             .mailbutton
-                color: white
+                color: $textEmphasis
                 font-weight: 600
                 font-size: 1.125rem
                 letter-spacing: 1px
@@ -85,10 +86,7 @@ body
                 cursor: pointer
 
                 &:hover
-                    background-color: $primaryLight
-
-            &:hover
-                color: $primaryLight
+                    background-color: $primary
 
 footer
     position: absolute
@@ -104,3 +102,23 @@ footer
         padding-top: 1rem
         padding-bottom: 1rem
         font-size: 0.8rem
+
+// media queries
+@media screen and ( max-width: $for-mobile )
+    body
+        display: flex
+        align-items: flex-start
+        justify-content: center
+
+@media screen and ( min-width: $for-desktop )
+    body
+        display: flex
+        align-items: center
+        justify-content: center
+
+// animation keyframes
+@keyframes move
+    0%
+        background-position: top
+    100%
+        background-position: bottom
