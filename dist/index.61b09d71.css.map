@@ -1,0 +1,1 @@
+{"mappings":"AAAA;EACI,aAAA;EACA,WAAA;EACA,8FAAA;A","sources":["src/sass/main.sass"],"sourcesContent":["body\r\n    height: 100vh\r\n    width: 100%\r\n    background: linear-gradient(to right, hsla(235.26, 25%, 5%, 1), hsla(235.26, 25%, 5%, 0.5)), url('../img/fiber.jpg')\r\n"],"names":[],"version":3,"file":"index.61b09d71.css.map","sourceRoot":"/__parcel_source_root/"}
