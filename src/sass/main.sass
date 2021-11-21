@@ -1,4 +1,70 @@
+// vars
+$textNormal: hsla(0, 0%, 100%, 0.6)
+$textEmphasis: hsla(0, 0%, 100%, 0.86)
+$primary: hsl(41,100%,53%)
+$primaryLight: hsl(41,100%,63%)
+$primaryDark: hsl(41,90%,43%)
+$primaryDarker: hsl(41,80%,33%)
+$textLink: $primary
+
+// reset
+body
+    padding: 0px
+    margin: 0px
+    display: block
+    box-sizing: border-box
+    font-family: "Montserrat", sans-serif
+
+// styles
+
 body
     height: 100vh
     width: 100%
     background: linear-gradient(to right, hsla(235.26, 25%, 5%, 1), hsla(235.26, 25%, 5%, 0.5)), url('../img/fiber.jpg')
+    background-repeat: no-repeat
+    display: flex
+    align-items: center
+    justify-content: center
+
+    main
+        max-width: 80%
+
+        .subtitle
+            color: $textEmphasis
+            font-weight: 500
+
+        .title
+            color: white
+            font-weight: 700
+
+        .divider
+            height: 0.5rem
+            width: 5rem
+            background-color: $primary
+            margin-bottom: 2rem
+
+        .introduction
+            color: $textNormal
+
+        .contact
+            color: $textEmphasis
+
+            a
+                color: $primaryDark
+                font-weight: 700
+                text-decoration: none
+                cursor: pointer
+
+                &:hover
+                    color: $primaryLight
+
+    footer
+        position: absolute
+        bottom: 0
+        width: 100%
+
+        .copyright
+            text-align: center
+            width: 100%
+            background-color: hsla(0, 0%, 0%, 0.2)
+            color: $textNormal
