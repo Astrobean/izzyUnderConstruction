@@ -31,7 +31,7 @@ body
     background: linear-gradient(to right, hsla(235.26, 25%, 5%, 1), hsla(235.26, 25%, 5%, 0.5)), url('../img/fiber.jpg')
     background-repeat: no-repeat
     animation-name: move
-    animation-duration: 90s
+    animation-duration: 69s
     animation-iteration-count: infinite
     animation-timing-function: ease-in-out
 
@@ -115,6 +115,11 @@ footer
         display: flex
         align-items: center
         justify-content: center
+
+// Additional high-res bg for rich people
+@media screen and ( min-width: 1440px )
+    body
+        background-image: url(../img/fiber-hires.jpg)
 
 // animation keyframes
 @keyframes move
