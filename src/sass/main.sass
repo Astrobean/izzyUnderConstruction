@@ -1,3 +1,5 @@
+// Hello from Jeffrey @ Izzy IT
+
 // vars
 $textNormal: hsla(0, 0%, 100%, 0.6)
 $textEmphasis: hsla(0, 0%, 100%, 0.86)
@@ -6,6 +8,11 @@ $primaryLight: hsl(41,100%,63%)
 $primaryDark: hsl(41,90%,43%)
 $primaryDarker: hsl(41,80%,33%)
 $textLink: $primary
+
+$breakpointXL: 1800px
+$breakpointLg: 1200px
+$breakpointMd: 900px
+$breakpointSm: 600px
 
 // reset
 body
@@ -27,44 +34,48 @@ body
     justify-content: center
 
     main
-        max-width: 80%
+        padding: 3rem
+        max-width: 768px
 
-        .subtitle
-            color: $textEmphasis
-            font-weight: 500
+    .subtitle
+        color: $textEmphasis
+        font-weight: 500
 
-        .title
-            color: white
+    .title
+        color: white
+        font-weight: 700
+
+    .divider
+        height: 0.5rem
+        width: 5rem
+        background-color: $primary
+        margin-bottom: 2rem
+
+    .introduction, .cta
+        color: $textNormal
+        margin-bottom: 1.2rem
+
+    .contact
+        color: $textEmphasis
+
+        a
+            color: $primaryDark
             font-weight: 700
+            text-decoration: none
+            cursor: pointer
 
-        .divider
-            height: 0.5rem
-            width: 5rem
-            background-color: $primary
-            margin-bottom: 2rem
+            &:hover
+                color: $primaryLight
 
-        .introduction
-            color: $textNormal
+footer
+    position: absolute
+    bottom: 0
+    width: 100%
 
-        .contact
-            color: $textEmphasis
-
-            a
-                color: $primaryDark
-                font-weight: 700
-                text-decoration: none
-                cursor: pointer
-
-                &:hover
-                    color: $primaryLight
-
-    footer
-        position: absolute
-        bottom: 0
+    .copyright
+        text-align: center
         width: 100%
-
-        .copyright
-            text-align: center
-            width: 100%
-            background-color: hsla(0, 0%, 0%, 0.2)
-            color: $textNormal
+        background-color: hsla(0, 0%, 0%, 0.2)
+        color: $textNormal
+        margin-bottom: 0
+        padding: 1rem, 0, 1rem, 0
