@@ -23,6 +23,9 @@ body
     font-family: "Montserrat", sans-serif
 
 // styles
+.highlight
+    color: $textEmphasis
+    font-weight: 600
 
 body
     height: 100vh
@@ -51,9 +54,12 @@ body
         background-color: $primary
         margin-bottom: 2rem
 
-    .introduction, .cta
+    .textbox
         color: $textNormal
         margin-bottom: 1.2rem
+
+        li
+            font-weight: 600
 
     .contact
         color: $textEmphasis
@@ -63,6 +69,23 @@ body
             font-weight: 700
             text-decoration: none
             cursor: pointer
+
+            .mailbutton
+                color: white
+                font-weight: 600
+                font-size: 1.125rem
+                letter-spacing: 1px
+                background-color: $primaryDark
+                border: none
+                text-transform: uppercase
+                padding-top: 0.5rem
+                padding-right: 2rem
+                padding-bottom: 0.5rem
+                padding-left: 2rem
+                cursor: pointer
+
+                &:hover
+                    background-color: $primaryLight
 
             &:hover
                 color: $primaryLight
@@ -78,4 +101,6 @@ footer
         background-color: hsla(0, 0%, 0%, 0.2)
         color: $textNormal
         margin-bottom: 0
-        padding: 1rem, 0,
+        padding-top: 1rem
+        padding-bottom: 1rem
+        font-size: 0.8rem
